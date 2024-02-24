@@ -1,0 +1,72 @@
+@import '../../App.scss';
+
+.login-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    .login-left {
+        width: 40%;
+        .login-left-inner {
+            max-width: 80%;
+            margin: auto;
+            h2{
+                margin-bottom: 2rem;
+                font-size: 2rem;
+            }
+            .logo {
+                margin-bottom: 3rem;
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                }
+                .dark-logo {
+                    display: block;
+                    .dark & {
+                        display: none;
+                    }
+                }
+                .light-logo {
+                    display: none;
+                    .dark & {
+                        display: block;
+                    }
+                }
+            }
+            .ant-input {
+                height: 48px;
+                margin-bottom: 30px;
+            }
+            .main-btn {
+                height: 48px;
+            }
+        }
+    }
+    .login-right {
+        width: 60%;
+        text-align: center;
+        background-color: #F4F9FC;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .dark & {
+            background: darken($dark-color, 2);
+          }
+        .right-header {
+            margin-bottom: 4rem;
+            h2{
+                margin-bottom: 0.5rem;
+                font-size: 2rem;
+                margin-top: 0;
+            }
+            p {
+                margin-bottom: 0;
+                margin-top: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

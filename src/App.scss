@@ -1,0 +1,124 @@
+$primary-color: #165141;
+$border-color: #cccccc;
+$white-color: #ffffff;
+$text-primary: rgba(0, 0, 0, 0.85);
+$dark-color: #122333;
+$font-primary: "Poppins", sans-serif;
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  color: $text-primary;
+  .dark & {
+    background: $dark-color;
+    color: $white-color;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: auto;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  z-index: 2;
+  .icon {
+    width: 22px;
+    .dark & {
+      fill: $white-color;
+    }
+  }
+}
+
+.ant-btn-primary {
+  background: $primary-color;
+  border-color: $primary-color;
+  &:hover, &:focus {
+    background: darken($primary-color, 2) !important;
+    border-color: darken($primary-color, 2) !important;
+  }
+}
+
+.ant-btn-default {
+  border-color: $primary-color;
+  color: $primary-color;
+  &:hover, &:focus {
+    border-color: darken($primary-color, 2) !important;
+    color: darken($primary-color, 2) !important;
+  }
+}
+
+.main-btn {
+  background: $primary-color;
+  border:1px solid $primary-color;;
+  color: $white-color;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 6px;
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+  &:hover, &:focus {
+    background: darken($primary-color, 5);
+  }
+}
+
+.leftbar {
+  width: 100%;
+  max-width: 280px;
+  background: $primary-color;
+  min-height: 100vh;
+  padding: 0 20px;
+  .dark & {
+      background: darken($dark-color, 2);
+  }
+  .logo {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      img {
+          width: 100%;
+          max-width: 180px;
+          margin: auto;
+      }
+  }
+  ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+          padding: 4px 0;
+          a {
+              color: $white-color;
+              display: block;
+              padding: 12px 15px;
+              border-radius: 6px;
+              text-decoration: none;
+              border-left: 2px solid transparent;
+              &.active {
+                  border-left: 2px solid #B77C3D;
+                  background: darken($primary-color, 1.5);
+                  .dark & {
+                      background: $dark-color;
+                  }
+              }
+          }
+      }
+  }
+}
+
+.ant-tour-indicators {
+  .ant-tour-indicator.ant-tour-indicator-active {
+    background: $primary-color !important;
+  }
+}
